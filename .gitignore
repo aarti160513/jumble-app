@@ -1,0 +1,37 @@
+# Byte-compiled / optimized Python files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+env/
+*.env
+
+# IDE/Editor specific files
+.idea/
+.vscode/
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+
+# Compiled files
+*.pyc
+*.pyo
+*.dll
+*.so
+*.dylib
+
+# Package files
+*.egg
+*.egg-info/
+dist/
+build/
+*.tar.gz
+*.tgz
+*.zip
+
+# Other
+.DS_Store
+.coverage
