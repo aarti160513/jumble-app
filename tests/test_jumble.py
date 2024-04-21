@@ -20,3 +20,10 @@ def test_request_jumble_shift0(client):
     })
     
     assert response.json["jumbled"] ==  "test 123"
+
+def test_request_jumble_400(client):
+    response = client.post("/api/jumble/1000", json={
+            "messag": "test 123!"
+    })
+    
+    assert response.status_code == 400
