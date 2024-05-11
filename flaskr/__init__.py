@@ -31,11 +31,12 @@ def create_app(test_config=None):
                             # jumble - shift right by n
                             c = ord(ch) - ord("a")
                             scrambled_string += chr(((c + n) % 26) + ord("a"))
+                            
                         elif "A" <= ch <= "Z":
                             # jumble - shift right by n
                             c = ord(ch) - ord("A")
                             scrambled_string += chr(((c + n) % 26) + ord("A"))
-
+                            
                     return jsonify({"jumbled": scrambled_string}), 200
                 else:
                     return jsonify({"error": "message not found in JSON data"}), 400
@@ -44,7 +45,7 @@ def create_app(test_config=None):
         else:
             return jsonify({"error": "Request does not contain valid JSON"}), 400
 
-    # healthcheck for app
+       # healthcheck for app
     @app.route('/api/health')
     def hello():
         return 'Healthy'
